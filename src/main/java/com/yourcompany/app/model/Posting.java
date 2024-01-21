@@ -3,47 +3,33 @@ package com.yourcompany.app.model;
 import java.util.ArrayList;
 
 public class Posting {
-    public enum Status {
-        STILL_SEARCHING, // (# of open spots); default
-        IN_COMMUNICATION, // if participant send a message
-        FOUND // if approved
-    }
-    public enum Channel {
-        NEW_HACKS_2024,
-        NEW_HACKS_2023,
-        NEW_HACKS_2022
-    }
-    public enum Role {
-        BACK_END,
-        FRONT_END,
-        UX_UI_DESIGNER
-    }
+    public enum Status { STILL_SEARCHING, IN_COMMUNICATION, FOUND }
+    public enum Channel { NEW_HACKS_2024, NEW_HACKS_2023, NEW_HACKS_2022 }
+    public enum Role { BACK_END, FRONT_END, UX_UI_DESIGNER }
 
     private boolean active;
-    private final String postingName;
+    private String postingName;
+    private Status status = Status.STILL_SEARCHING;
     private Channel channel;
     private int spot;
-    private Status status;
     private String contents;
-    private ArrayList<Role> rolesNeeded;
-    private ArrayList<User> usersInTeam;
-    private ArrayList<String> messages;
+    private ArrayList<Role> rolesNeeded = new ArrayList<>();
+    private ArrayList<User> usersInTeam = new ArrayList<>();
+    private ArrayList<Message> messages = new ArrayList<>();
 
     public Posting(String name, Channel channel, int spot) {
         this.active = true;
         this.postingName = name;
         this.channel = channel;
         this.spot = spot;
-        this.status = Status.STILL_SEARCHING;
         this.contents = "";
-        this.rolesNeeded = new ArrayList<Role>();
-        this.usersInTeam = new ArrayList<User>();
-        this.messages = new ArrayList<>();
     }
 
-    public boolean isActive() {
-        return this.active;
+    public void setPostingClosed() {
+        setStatusFound();
+        this.active = false;
     }
+
     public String getName() {
         return this.postingName;
     }
@@ -76,53 +62,47 @@ public class Posting {
         this.status = Status.FOUND;
     }
 
-    public void setPostingClosed() {
-        this.setStatusFound();
-        this.active = false;
-        // and some function to disappear posting
+    public void writeDescription(String description) {
+        this.contents = description;
     }
 
     public String getContents() {
         return this.contents;
     }
 
-    public void writeDescription(String description) {
-        this.contents = description;
-    }
-
-    public void clearDescription() {
-        this.contents = "";
-    }
-
     public ArrayList<Role> getRolesNeeded() {
-        return this.rolesNeeded;
-    }
-
-    public ArrayList<User> getUsersInTeam() {
-        return this.usersInTeam;
+        return rolesNeeded;
     }
 
     public void addRole(Role role) {
-        this.rolesNeeded.add(role);
-        // should make it up to 4?
+        rolesNeeded.add(role);
+    }
+
+    public ArrayList<User> getUsersInTeam() {
+        return usersInTeam;
     }
 
     public void addUser(User user) {
-        this.usersInTeam.add(user);
+        usersInTeam.add(user);
         decreaseRemainingSpot();
         if (this.spot == 0) {
             setPostingClosed();
         } else {
-            this.status = Status.STILL_SEARCHING;
+            setStatusSearching();
         }
     }
 
-    public ArrayList<String> getMessages() {
-        return this.messages;
+    // Handling messages
+    public ArrayList<Message> getMessages() {
+        return messages;
     }
 
-    public void receiveMessage(String message) {
-        this.messages.add(message);
-        this.setStatusInCommunication();
+    public void receiveMessage(Message message) {
+        setStatusInCommunication();
+        messages.add(message);
+    }
+
+    public void resolveMessage(Posting posting, User user, String message) {
+        messages.remove(message);
     }
 }
