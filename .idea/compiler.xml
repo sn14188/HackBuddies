@@ -9,5 +9,8 @@
         <module name="your-app-name" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HackBuddies" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
