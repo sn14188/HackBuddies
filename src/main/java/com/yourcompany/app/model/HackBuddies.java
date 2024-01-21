@@ -11,6 +11,10 @@ public class HackBuddies {
         this.postings = new ArrayList<Posting>();
     }
 
+    public ArrayList<Posting> getPostings() {
+        return postings;
+    }
+
     public void registerUser(String name, User.StudyLevel studyLevel, int studyYear) {
         User newUser = new User(name, studyLevel, studyYear);
         users.add(newUser);

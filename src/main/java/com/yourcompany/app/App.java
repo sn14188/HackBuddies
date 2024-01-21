@@ -7,5 +7,7 @@ public class App {
         System.out.println("Starting server...");
         ApplicationServer.init();
         System.out.println("Server is running...");
+
+
     }
 }
