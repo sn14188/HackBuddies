@@ -8,8 +8,8 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <spark.version>2.9.4</spark.version>
-    <spark.freemarker.version>2.3</spark.freemarker.version>
-    <freemarker.version>2.3.25-incubating</freemarker.version>
+    <spark.freemarker.version>2.7.1</spark.freemarker.version>
+    <freemarker.version>2.3.31</freemarker.version>
   </properties>
   <version>1.0-SNAPSHOT</version>
   <name>your-app-name</name>
@@ -37,7 +37,6 @@
       <artifactId>logback-classic</artifactId>
       <version>1.2.3</version>
     </dependency>
-    <!-- Spark Freemarker -->
     <dependency>
       <groupId>com.sparkjava</groupId>
       <artifactId>spark-template-freemarker</artifactId>
@@ -45,18 +44,6 @@
     </dependency>
 
     <!-- Freemarker -->
-    <dependency>
-      <groupId>freemarker</groupId>
-      <artifactId>freemarker</artifactId>
-      <version>2.3.3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.sparkjava</groupId>
-      <artifactId>spark-template-freemarker</artifactId>
-      <version>${spark.freemarker.version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>

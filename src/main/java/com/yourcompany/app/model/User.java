@@ -3,6 +3,7 @@ package com.yourcompany.app.model;
 import java.util.ArrayList;
 
 public class User {
+
     public enum StudyLevel { HIGH_SCHOOL, COLLEGE, UNIVERSITY, GRADUATE, OTHERS }
     private enum Language { PYTHON, JAVA }
     private enum Framework { REACT, MAVEN, SPARK }
@@ -27,6 +28,14 @@ public class User {
 
     public String getName() {
         return this.name;
+    }
+
+    public Object getStudyLevel() {
+        return this.studyLevel;
+    }
+
+    public Object getStudyYear() {
+        return this.studyYear;
     }
 
     public void sendMessage(Posting posting, String message) {

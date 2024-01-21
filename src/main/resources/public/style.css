@@ -1,0 +1,31 @@
+body {
+    font-family: "Work Sans";
+    background-color: #F2F5FA;
+}
+
+.register-title {
+    margin-top:0;
+}
+.register-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-form {
+    align-content: center;
+    background-color: white;
+    border-radius:20px;
+    padding: 20px;
+}
+
+.register-submitbtn {
+    background-color: #0F67FD;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    color: white;
+    border-width:0px;
+}

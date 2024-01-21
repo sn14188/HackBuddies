@@ -7,6 +7,8 @@ import freemarker.template.Configuration;
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 import java.util.HashMap;
+import java.util.Map;
+
 import com.yourcompany.app.model.User.StudyLevel;
 
 
@@ -53,5 +55,6 @@ public class ApplicationServer {
             res.status(201);
             return "User " + user.getName() + " starts.";
         });
+
     }
 }

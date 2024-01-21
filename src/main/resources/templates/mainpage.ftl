@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <div>
     <p>123${postName}</p>

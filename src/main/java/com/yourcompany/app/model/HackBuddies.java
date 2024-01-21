@@ -11,7 +11,6 @@ public class HackBuddies {
         this.postings = new ArrayList<Posting>();
     }
 
-    // Handling user
     public ArrayList<Posting> getPostings() {
         return postings;
     }
@@ -33,11 +32,4 @@ public class HackBuddies {
         return users;
     }
 
-    public ArrayList<Posting> getPostings() {
-        return postings;
-    }
-
-    public void resolvePosting(User user, Posting posting) {
-        user.makePostResolved(posting);
-    }
 }
