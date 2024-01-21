@@ -11,6 +11,7 @@ public class HackBuddies {
         this.postings = new ArrayList<Posting>();
     }
 
+    // Handling user
     public ArrayList<Posting> getPostings() {
         return postings;
     }
@@ -20,18 +21,20 @@ public class HackBuddies {
         users.add(newUser);
     }
 
-    public Posting createPosting(User user, String postingName, Posting.Channel channel, int spots, String description) {
-        Posting newPosting = user.doPost(postingName, channel, spots, description);
+    // Handling posting
+    public Posting createPosting(String postingName, Posting.Channel channel, int spots, String description) {
+        Posting newPosting = new Posting(postingName, channel, spots);
+        newPosting.writeDescription(description);
         postings.add(newPosting);
         return newPosting;
     }
 
-    public void sendMessageToPosting(User user, Posting posting, String message) {
-        user.sendMessage(posting, message);
-        posting.receiveMessage(message);
+    public ArrayList<User> getUsers() {
+        return users;
     }
 
-    public void resolveMessage(User user, Posting posting, String message) {
+    public ArrayList<Posting> getPostings() {
+        return postings;
     }
 
     public void resolvePosting(User user, Posting posting) {

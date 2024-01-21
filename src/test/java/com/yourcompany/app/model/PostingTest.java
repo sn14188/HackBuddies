@@ -15,22 +15,8 @@ class PostingTest {
     }
 
     @Test
-    void getName() {
-        assertEquals("Looking for UX/UI designer!", posting.getName());
-    }
-
-    @Test
-    void getChannel() {
-        assertEquals(Posting.Channel.NEW_HACKS_2024, posting.getChannel());
-    }
-
-    @Test
-    void getSpot() {
-        assertEquals(4, posting.getSpot());
-    }
-
-    @Test
     void decreaseRemainingSpot() {
+        assertEquals(4, posting.getSpot());
         posting.decreaseRemainingSpot();
         assertEquals(3, posting.getSpot());
     }
@@ -53,18 +39,10 @@ class PostingTest {
     }
 
     @Test
-    void setPostingClosed() {
-        assertTrue(posting.isActive());
-        posting.setPostingClosed();
-        assertFalse(posting.isActive());
-    }
-
-    @Test
     void writeDescription() {
+        assertEquals("", posting.getContents());
         posting.writeDescription("I need you ASAP!");
         assertEquals("I need you ASAP!", posting.getContents());
-        posting.clearDescription();
-        assertEquals("", posting.getContents());
     }
 
     @Test

@@ -1,5 +1,13 @@
-com/yourcompany/app/model/Status.class
+com/yourcompany/app/model/Message$MessageStatus.class
+com/yourcompany/app/model/User$Framework.class
+com/yourcompany/app/model/Posting$Status.class
+com/yourcompany/app/model/Posting.class
+com/yourcompany/app/model/Message.class
+com/yourcompany/app/model/Posting$Role.class
+com/yourcompany/app/model/Posting$Channel.class
+com/yourcompany/app/model/User$StudyLevel.class
+com/yourcompany/app/model/User$Language.class
+com/yourcompany/app/server/ApplicationServer.class
+com/yourcompany/app/App.class
 com/yourcompany/app/model/HackBuddies.class
 com/yourcompany/app/model/User.class
-com/yourcompany/app/App.class
-com/yourcompany/app/model/Posting.class
