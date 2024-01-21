@@ -1,14 +1,16 @@
 package com.yourcompany.app.server;
 
 import static spark.Spark.*;
-
 import com.yourcompany.app.model.User;
 import freemarker.template.Configuration;
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
-import java.util.HashMap;
-import com.yourcompany.app.model.User.StudyLevel;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.yourcompany.app.model.User.StudyLevel;
 
 public class ApplicationServer {
     public static void init() {
@@ -18,14 +20,19 @@ public class ApplicationServer {
         freeMarkerConfiguration.setClassForTemplateLoading(ApplicationServer.class, "/templates");
         FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine(freeMarkerConfiguration);
 
-        get("/register", (req, res) -> {
-            return new ModelAndView(new HashMap<>(), "register.ftl");
+        get("/event", (req, res) -> {
+            return new ModelAndView(new HashMap<>(), "eventPage.ftl");
         }, freeMarkerEngine);
         exception(Exception.class, (exception, request, response) -> {
             exception.printStackTrace();
             response.status(500);
             response.body("Server Error: " + exception.getMessage());
         });
+
+        get("/live-room", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "liveRoom.ftl");
+        }, freeMarkerEngine);
 
         post("/register", (req, res) -> {
             String name = req.queryParams("name");
