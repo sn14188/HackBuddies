@@ -1,6 +1,7 @@
 body {
     font-family: "Work Sans";
     background-color: #F2F5FA;
+    margin: 40px;
 }
 
 .register-title {
@@ -28,4 +29,80 @@ body {
     border-radius: 20px;
     color: white;
     border-width:0px;
+}
+
+.btn {
+    background-color: #0F67FD;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    color: white;
+    border-width:0px;
+    text-decoration: none;
+}
+
+.event-textbox2 {
+    margin-bottom: 50px;
+}
+
+.event-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+.event-box {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.event-coln {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 80px;
+}
+
+.navbar {
+   overflow: hidden;
+    display:flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-bottom: 50px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.event-btn1 {
+    float: left;
+    background: url('Vector.png') no-repeat center center;
+}
+
+.event-btn2 {
+    float: left;
+    display: block;
+    background: url('search.png') no-repeat center center;
+}
+
+.event-btn3 {
+    float: right;
+    display: block;
+    background: url('tray.fill.png') no-repeat center center;
+}
+
+.event-btn4 {
+    float: right;
+    display: block;
+    background: url('person.crop.circle.fill.png') no-repeat center center;
 }
