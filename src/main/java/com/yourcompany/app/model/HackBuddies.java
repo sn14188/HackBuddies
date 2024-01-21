@@ -38,7 +38,6 @@ public class HackBuddies {
 //        postings.remove(posting);
 //    }
 
-    // Handling message
 //    public void sendMessageToPosting(User user, Posting posting, Message message) {
 //        user.sendMessage(posting, message);
 //        posting.setStatusInCommunication();

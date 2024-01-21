@@ -3,15 +3,15 @@ package com.yourcompany.app.model;
 import java.util.ArrayList;
 
 public class User {
-    enum StudyLevel { HIGH_SCHOOL, COLLEGE, UNIVERSITY, GRADUATE, OTHERS }
+    public enum StudyLevel { HIGH_SCHOOL, COLLEGE, UNIVERSITY, GRADUATE, OTHERS }
     private enum Language { PYTHON, JAVA }
     private enum Framework { REACT, MAVEN, SPARK }
     private String name;
     private StudyLevel studyLevel; // degree
     private int studyYear;
 //    private String program;
-    // private ArrayList<Language> languages; // available languages
-    // private ArrayList<Framework> frameworks; // available framework
+//    private ArrayList<Language> languages; // available languages
+//    private ArrayList<Framework> frameworks; // available framework
     private String userMessage;
     private boolean sentMessage = false;
 
@@ -20,8 +20,8 @@ public class User {
         this.studyLevel = studyLevel;
         this.studyYear = studyYear;
 //        this.program = "";
-        // this.languages = new ArrayList<Language>();
-        // this.frameworks = new ArrayList<Framework>();
+//        this.languages = new ArrayList<Language>();
+//        this.frameworks = new ArrayList<Framework>();
         this.userMessage = "";
     }
 
