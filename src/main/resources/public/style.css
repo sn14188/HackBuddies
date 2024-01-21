@@ -5,7 +5,8 @@ body {
 }
 
 .register-title {
-    margin-top:0;
+    margin-top:15px;
+    margin-bottom: 20px;
 }
 .register-box {
     display: flex;
@@ -13,22 +14,43 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    background-color: #0F67FD;
 }
 
 .register-form {
     align-content: center;
     background-color: white;
     border-radius:20px;
-    padding: 20px;
+    padding: 70px;
+}
+
+.register-forminput {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+#studyYear, #studyLevel {
+    width: 100%;
+    margin-left: 10px;
 }
 
 .register-submitbtn {
     background-color: #0F67FD;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
     color: white;
     border-width:0px;
+    text-decoration: none;
+    width:100%;
+}
+
+.register-formbox {
+    margin-bottom: 20px;
 }
 
 .btn {

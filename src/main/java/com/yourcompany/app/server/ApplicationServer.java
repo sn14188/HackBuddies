@@ -36,6 +36,15 @@ public class ApplicationServer {
             return new ModelAndView(model, "liveRoom.ftl");
         }, freeMarkerEngine);
 
+        get("/register", (req, res) -> {
+            return new ModelAndView(new HashMap<>(), "register.ftl");
+        }, freeMarkerEngine);
+        exception(Exception.class, (exception, request, response) -> {
+            exception.printStackTrace();
+            response.status(500);
+            response.body("Server Error: " + exception.getMessage());
+        });
+
         post("/register", (req, res) -> {
             String name = req.queryParams("name");
             String studyLevelParam = req.queryParams("studyLevel").toUpperCase();
