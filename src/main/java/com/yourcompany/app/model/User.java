@@ -1,37 +1,71 @@
 package com.yourcompany.app.model;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class User {
-    private String name;
-    private String level_of_study; // degree
-    private int year_of_study;
-    private String program;
-    private List<String> languages; // available langs
-    private List<String> framework; // available framework
-    private String description;
-
-    public User(String name) {
-        this.name = name;
+    public enum StudyLevel {
+        HIGH_SCHOOL,
+        COLLEGE,
+        UNIVERSITY,
+        GRADUATE,
+        OTHERS
     }
 
-    /*
-    EFFECT: Make a post to find team members
-    - select a hackathon channel
-    - post messages with status (live)
-     */
-    public void doPost() {}
+    public enum Language {
+        PYTHON,
+        JAVA
+    }
 
-    // EFFECT: Send a message to the host to talk
-    public void sendMessage() {}
+    private enum Framework {
+        REACT,
+        MAVEN,
+        SPARK
+    }
 
-    // EFFECT: Make a post resolved and close it
-    public void makePostResolved() {}
+    public String name;
+    private StudyLevel studyLevel; // degree
+    private int studyYear;
+    private String program;
+    private ArrayList<Language> languages; // available languages
+    private ArrayList<Framework> frameworks; // available framework
+    private String message;
+    private boolean messageStatus;
 
-    // To check the connection to its test module
+    public User(String name, StudyLevel studyLevel, int studyYear) {
+        this.name = name;
+        this.studyLevel = studyLevel;
+        this.studyYear = studyYear;
+        this.program = "";
+        this.languages = new ArrayList<Language>();
+        this.frameworks = new ArrayList<Framework>();
+        this.message = "";
+        this.messageStatus = false;
+    }
+
     public String getName() {
         return this.name;
     }
+
+    public Posting doPost(String postingName, Posting.Channel channel, int spots, String description) {
+        Posting newPosting = new Posting(postingName, channel, spots);
+        newPosting.writeDescription(description);
+        return newPosting;
+    }
+
+    public void sendMessage(Posting posting, String message) {
+        posting.setStatusInCommunication();
+        this.message = message;
+        this.messageStatus = true;
+    }
+
+
+
+    // EFFECT: Make a post resolved and close it
+    public void makePostResolved(Posting posting) {
+        posting.setStatusFound();
+    }
+
+
 
     // later things if possible:
     // - filters: using tags
