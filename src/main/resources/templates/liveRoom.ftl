@@ -6,5 +6,17 @@
 </head>
 <body>
     <h1>nwHacks 2024 Team Formation Room</h1>
+    <a href="/event" class="btn">Back To Event Page</a>
+
+    <main>
+        <section id="team-formation-grid">
+        </section>
+
+        <section id="participants-browse-grid">
+        </section>
+
+        <section id="my-team-grid">
+        </section>
+    </main>
 </body>
 </html>
