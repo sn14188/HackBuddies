@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Event Page - nwHacks 2024</title>
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap">
+
 </head>
 <body>
 <header>

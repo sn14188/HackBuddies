@@ -12,11 +12,11 @@
         <section id="team-formation-grid">
         </section>
 
-        <aside id="participants-browse-grid">
-        </aside>
+        <section id="participants-browse-grid">
+        </section>
 
-        <aside id="my-team-grid">
-        </aside>
+        <section id="my-team-grid">
+        </section>
     </main>
 </body>
 </html>
