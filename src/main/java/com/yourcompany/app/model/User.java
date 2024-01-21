@@ -15,14 +15,23 @@ public class User {
         this.name = name;
     }
 
+    /*
+    EFFECT: Make a post to find team members
+    - select a hackathon channel
+    - post messages with status (live)
+     */
+    public void doPost() {}
+
+    // EFFECT: Send a message to the host to talk
+    public void sendMessage() {}
+
+    // EFFECT: Make a post resolved and close it
+    public void makePostResolved() {}
+
+    // To check the connection to its test module
     public String getName() {
         return this.name;
     }
-
-    // functions:
-    // - select a hackathon channel
-    // - post messages with status (live)
-    // - function for users to send a post
 
     // later things:
     // - filters: using tags
