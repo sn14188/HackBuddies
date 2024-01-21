@@ -1,12 +1,13 @@
 package com.yourcompany.app;
 
+import static spark.Spark.*;
+
 /**
- * Hello world!
- *
+ * Main app class
  */
 public class App {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+        port(4321);
         System.out.println( "Hello World!" );
     }
 }
