@@ -27,6 +27,7 @@ public class Posting {
     private String contents;
     private ArrayList<Role> rolesNeeded;
     private ArrayList<User> usersInTeam;
+    private ArrayList<String> messages;
 
     public Posting(String name, Channel channel, int spot) {
         this.active = true;
@@ -37,6 +38,7 @@ public class Posting {
         this.contents = "";
         this.rolesNeeded = new ArrayList<Role>();
         this.usersInTeam = new ArrayList<User>();
+        this.messages = new ArrayList<>();
     }
 
     public boolean isActive() {
@@ -110,6 +112,17 @@ public class Posting {
         decreaseRemainingSpot();
         if (this.spot == 0) {
             setPostingClosed();
+        } else {
+            this.status = Status.STILL_SEARCHING;
         }
+    }
+
+    public ArrayList<String> getMessages() {
+        return this.messages;
+    }
+
+    public void receiveMessage(String message) {
+        this.messages.add(message);
+        this.setStatusInCommunication();
     }
 }
