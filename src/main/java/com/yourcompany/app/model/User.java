@@ -10,7 +10,15 @@ public class User {
     private List<String> languages; // available langs
     private List<String> framework; // available framework
     private String description;
-    
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
     // functions:
     // - select a hackathon channel
     // - post messages with status (live)

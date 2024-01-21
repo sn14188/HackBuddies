@@ -1,2 +1,5 @@
-com/yourcompany/app/HackBuddies.class
+com/yourcompany/app/model/Status.class
+com/yourcompany/app/model/HackBuddies.class
+com/yourcompany/app/model/User.class
 com/yourcompany/app/App.class
+com/yourcompany/app/model/Posting.class
