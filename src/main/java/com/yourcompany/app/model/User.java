@@ -33,7 +33,7 @@ public class User {
         return this.name;
     }
 
-    // later things:
+    // later things if possible:
     // - filters: using tags
     // - click into posts to send short (pre-filled) messages
     // - options for host or participant
