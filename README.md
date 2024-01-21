@@ -7,7 +7,7 @@ Just over 24 hours ago, a few of us were still scrambling to find team members f
 - Tedious messaging admin:** reaching out to individuals one by one is time-consuming and doesn’t guarantee availability. New groups recruiting last-minute members have difficulty coordinating communications in time<br><br>
 
 <h3>Solution</h3>
-Therefore, our solution provides a streamlined experience for team formation. Post messages about your team's needs, and let others respond directly. Live updates regarding the team forming status ensure that you are always in the know about the latest changes and additions. No more relying on static information or outdated posts! Embrace the power of live updates for a dynamic and efficient team-finding experience!
+Therefore, our solution provides a streamlined experience for team formation. Post messages about your team's needs, and let others respond directly. Live updates regarding the team forming status ensure that you are always in the know about the latest changes and additions. No more relying on static information or outdated posts! Embrace the power of live updates for a dynamic and efficient team-finding experience!<br><br>
 
 
 ![Example Image](eventpage.png)
