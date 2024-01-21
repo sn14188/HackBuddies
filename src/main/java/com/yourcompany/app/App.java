@@ -1,13 +1,11 @@
 package com.yourcompany.app;
 
-import static spark.Spark.*;
+import com.yourcompany.app.server.ApplicationServer;
 
-/**
- * Main app class
- */
 public class App {
     public static void main( String[] args ) {
-        port(4321);
-        System.out.println( "Hello World!" );
+        System.out.println("Starting server...");
+        ApplicationServer.init();
+        System.out.println("Server is running...");
     }
 }
